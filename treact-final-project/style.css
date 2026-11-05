@@ -582,7 +582,6 @@ VALUES ↓
 
 */
 
-
 #values .row {
   display: flex;
   justify-content: space-between;
@@ -601,16 +600,12 @@ VALUES ↓
   padding: 32px 64px 32px 0;
 }
 
-
-
 .values__list {
   margin-left: 0px;
   margin-right: 0px;
-  display:flex;
+  display: flex;
   max-width: none;
   flex-direction: row;
-
-
 }
 
 .value:nth-of-type(1) {
@@ -620,6 +615,10 @@ VALUES ↓
 .value__img {
   width: 20px;
   height: 20px;
+}
+
+.values__img {
+  width: 50%;
 }
 
 .value:nth-child(1) .value__img--wrapper {
@@ -636,7 +635,6 @@ VALUES ↓
   align-items: center;
   width: 36px;
   height: 36px;
-
 }
 
 .value {
@@ -650,7 +648,6 @@ VALUES ↓
 .value__title {
   display: flex;
   align-items: center;
- 
 }
 
 .value__para {
@@ -659,7 +656,7 @@ VALUES ↓
   color: #718096;
 }
 
-.value__name{
+.value__name {
   margin-left: 12px;
   font-size: 20px;
   font-weight: bold;
@@ -687,6 +684,189 @@ PRICING ↓
   flex-direction: column;
   align-items: center;
 }
+
+.plan {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  width: 100%;
+  max-width: 24rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  color: rgb(26, 32, 44);
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plans {
+display: flex;
+position: relative;
+flex-direction: row;
+width: 100%;
+justify-content: space-between;
+}
+
+.plan__top {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  line-height: 1.625;
+}
+
+.plan:nth-child(2n + 1) .plan__name,
+.plan:nth-child(2n + 1) .plan__price,
+.plan:nth-child(2n + 1) .plan__target {
+  color: rgb(26, 32, 44);
+}
+
+.plan__name {
+  font-size: 20px;
+}
+
+.plan__duration {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+.plan__price {
+  font-size: 48px;
+  margin: 4px 0px;
+}
+.plan__stripe {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.plan:nth-child(1) .plan__stripe,
+.plan:nth-child(1) .plan__button {
+  color: rgb(247, 250, 252);
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan:nth-child(1) .plan__middle,
+.plan:nth-child(3) .plan__middle {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(229, 231, 235);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(229, 231, 235);
+}
+
+.plan__middle {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  padding: 2rem;
+}
+
+.plan:nth-child(2n + 1) .plan__name,
+.plan:nth-child(2n + 1) .plan__price,
+.plan:nth-child(2n + 1) .plan__target {
+  color: rgb(26, 32, 44);
+}
+.plan__target {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
+.plan__name,
+.plan__price,
+.plan__duration {
+  font-weight: bold;
+  line-height: 1.625;
+}
+
+.plan:nth-child(2n + 1) .plan__duration {
+  color: rgb(160, 174, 192);
+}
+
+.plan__feature {
+  margin-top: 20px;
+  font-weight: 500;
+  color: rgb(113, 128, 150);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.plan:nth-child(1) .plan__stripe,
+.plan:nth-child(1) .plan__button {
+  color: rgb(247, 250, 252);
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
+.plan__bottom {
+padding: 2rem 4rem;
+}
+.plan__button {
+background-color: rgb(100, 21, 255);
+padding: 1rem 2rem;
+font-weight: 700;
+color: rgb(247, 250, 252);
+transition: 300ms;
+width: 100%;
+border-radius: 9999px;
+font-size: 0.875rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+button {
+cursor: pointer;
+border: medium;
+}
+
+.plan:nth-child(2) .plan__name, .plan:nth-child(2) .plan__price, .plan:nth-child(2) .plan__target, .plan:nth-child(2) .plan__duration, .plan:nth-child(2) .plan__feature {
+color: rgb(247, 250, 252);
+}
+
+.plan:nth-child(2) .plan__middle {
+border-top-width: 2px;
+border-top-style: solid;
+border-top-color: rgb(102, 126, 234);
+border-bottom-width: 2px;
+border-bottom-style: solid;
+border-bottom-color: rgb(102, 126, 234);
+}
+
+.plans__blob {
+z-index: -10;
+position: absolute;
+left: 0px;
+bottom: 0px;
+transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+height: 256px;
+width: 256px;
+opacity: 0.25;
+}
+
 
 /* 
 
@@ -751,6 +931,15 @@ MOBILE RESPONSIVENESS ↓
     width: 5rem;
     bottom: -50px;
   }
+  .plan__bottom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .plan__bottom {
+    padding: 2rem 4rem;
+  }
+  .plan__button {
+max-width: none;
 }
 
 @media (max-width: 1024px) {
