@@ -1269,6 +1269,10 @@ MOBILE RESPONSIVENESS ↓
       brightness(94%) contrast(115%);
   }
 
+  .nav__links {
+    display: none;
+  }
+
   .header__description {
     width: 100%;
     text-align: center;
