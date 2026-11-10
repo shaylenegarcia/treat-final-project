@@ -128,6 +128,7 @@ nav {
   opacity: 0;
   transform: translateX(300%);
   transition: all 300ms ease;
+  display:none;
 }
 
 .modal__links {
@@ -155,6 +156,9 @@ nav {
   border-radius: 500px;
   border: none;
 }
+.btn__menu {
+  display:none;
+} 
 
 .menu--open .modal {
   visibility: visible;
@@ -166,6 +170,7 @@ nav {
   position: fixed;
   top: 24px;
   right: 18px;
+
 }
 
 /* 
@@ -1250,11 +1255,11 @@ MOBILE RESPONSIVENESS ↓
 @media (max-width: 768px) {
 
 
-  .btn__menu{
+  .btn__menu {
     background: transparent;
     border: none;
     transition: all 300ms ease;
-    display: block;
+
   }
 
 
